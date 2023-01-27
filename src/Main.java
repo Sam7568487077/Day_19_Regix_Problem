@@ -19,6 +19,7 @@ public class Main {
         FormDetails f1 = new FormDetails();
         f1.lastName();
         f1.emailId();
+        f1.password();
         //&& m.group().equals(args[0])
 
     }
