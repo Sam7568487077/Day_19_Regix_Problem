@@ -30,11 +30,15 @@ public class FormDetails {
 
     }
     void mobileFormat(){
-        Pattern p2 = Pattern.compile("91{2}\\s?[6-9][0-9]{9}");
+        Scanner sc1 = new Scanner(System.in);
+        //Pattern p2 = Pattern.compile("^(91 )[0-9]{10}");
         System.out.println("Enter your Mobile Number:");
-        String mobileNumber = sc.next();
-        Matcher m = p2.matcher(mobileNumber);
-        if (m.find()) {
+        //sc1.next();
+          String mobileNumber = sc1.nextLine();
+
+      //  Matcher m = p2.matcher(mobileNumber);
+        boolean output = Pattern.matches("(91 )[0-9]{10}",mobileNumber);
+        if (output == true) {
             System.out.println("Valid Mobile Number");
         } else {
             System.out.println("Invalid Mobile Number");
