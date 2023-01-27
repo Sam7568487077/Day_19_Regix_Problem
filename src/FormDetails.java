@@ -5,7 +5,10 @@ import java.util.regex.Pattern;
 public class FormDetails {
     Scanner sc = new Scanner(System.in);
     Pattern p = Pattern.compile("[A-Z][a-z]*");
-    Pattern p1 = Pattern.compile("abc[.][a-z]{3}@bl[.]co[.][a-z]{2}");
+  Pattern p1 = Pattern.compile("^([a-zA-Z0-9][+*.a-zA-Z0-9]*@[a-zA-z0-9]+(([.][a-zA-Z])+))");
+
+   // ^[0-9a-zA-Z]+([_+-.a-z0-9A-Z]+)*[@][a-zA-Z]+[.][a-z]{2,4}([.][a-z]{2})?$
+   //Pattern p1 = Pattern.compile("^[0-9a-zA-Z]+([_+.a-z0-9A-Z]+)*@[a-zA-Z]+[.][a-z]{2,4}([.][a-z]{2})?$");
     void lastName(){
 
         System.out.println("Enter your last name:");
