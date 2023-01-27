@@ -28,6 +28,21 @@ public class FormDetails {
             System.out.println("Invalid Email ID");
         }
 
+    }
+    void mobileFormat(){
+        Pattern p2 = Pattern.compile("91{2}\\s?[6-9][0-9]{9}");
+        System.out.println("Enter your Mobile Number:");
+        String mobileNumber = sc.next();
+        Matcher m = p2.matcher(mobileNumber);
+        if (m.find()) {
+            System.out.println("Valid Mobile Number");
+        } else {
+            System.out.println("Invalid Mobile Number");
+        }
+
+
+
+
 
     }
 
