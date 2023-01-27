@@ -5,11 +5,9 @@ import java.util.regex.Pattern;
 public class FormDetails {
     Scanner sc = new Scanner(System.in);
     Pattern p = Pattern.compile("[A-Z][a-z]*");
-  Pattern p1 = Pattern.compile("^([a-zA-Z0-9][+*.a-zA-Z0-9]*@[a-zA-z0-9]+(([.][a-zA-Z])+))");
 
-   // ^[0-9a-zA-Z]+([_+-.a-z0-9A-Z]+)*[@][a-zA-Z]+[.][a-z]{2,4}([.][a-z]{2})?$
-   //Pattern p1 = Pattern.compile("^[0-9a-zA-Z]+([_+.a-z0-9A-Z]+)*@[a-zA-Z]+[.][a-z]{2,4}([.][a-z]{2})?$");
-    void lastName(){
+    void lastName() {
+
 
         System.out.println("Enter your last name:");
         String lastName = sc.next();
@@ -20,8 +18,9 @@ public class FormDetails {
             System.out.println("Invalid Name");
         }
     }
-    void emailId()
-    {
+
+    void emailId() {
+        Pattern p1 = Pattern.compile("^([a-zA-Z0-9][+*.a-zA-Z0-9]*@[a-zA-z0-9]+(([.][a-zA-Z])+))");
         System.out.println("Enter your email Id:");
         String emailId = sc.next();
         Matcher m = p1.matcher(emailId);
@@ -33,7 +32,7 @@ public class FormDetails {
 
     }
 
-    void password(){
+    void password() {
         Pattern p3 = Pattern.compile("((?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]){8,})");
         System.out.println("Enter your Password:");
         String epassword = sc.next();
